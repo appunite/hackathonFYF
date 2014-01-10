@@ -7,26 +7,47 @@
 //
 
 #import "FYFBoardView.h"
+#import "FYFBeaconView.h"
 
-@implementation FYFBoardView
+@implementation FYFBoardView {
+    FYFBeaconView *_beacon;
+    UIImageView *_backgroundView;
+}
 
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
+        
         [self setBackgroundColor:[UIColor lightGrayColor]];
+        
+        _backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"background.jpg"]];
+        [self addSubview:_backgroundView];
+        
+        _beacon = [[FYFBeaconView alloc] init];
+        [self performSelector:@selector(addBeacon) withObject:nil afterDelay:3.0f];
+        
+        
+        
     }
     return self;
 }
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect
-{
-    // Drawing code
+- (void)addBeacon {
+    [self addSubview:_beacon];
+    [_beacon startAnimating];
 }
-*/
+
+- (void)layoutSubviews {
+    [super layoutSubviews];
+    [_backgroundView setFrame:self.bounds];
+    [_beacon setFrame:CGRectMake(80.0, 80.0f, 30.0f, 30.0f)];
+}
+
+- (void)addBeacons {
+    
+}
+
 
 @end

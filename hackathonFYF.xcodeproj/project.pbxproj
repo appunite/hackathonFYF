@@ -27,6 +27,8 @@
 		24D32B3218803EF7007C4057 /* FYFGameListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24D32B3118803EF7007C4057 /* FYFGameListViewController.m */; };
 		24D32B3518804047007C4057 /* FYFStartGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24D32B3418804047007C4057 /* FYFStartGameViewController.m */; };
 		24D32B3A18804C33007C4057 /* FYFStartGameView.m in Sources */ = {isa = PBXBuildFile; fileRef = 24D32B3918804C33007C4057 /* FYFStartGameView.m */; };
+		24D32B3E18805DC4007C4057 /* FYFBeaconView.m in Sources */ = {isa = PBXBuildFile; fileRef = 24D32B3D18805DC4007C4057 /* FYFBeaconView.m */; };
+		24D32B4018806A7D007C4057 /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 24D32B3F18806A7D007C4057 /* background.jpg */; };
 		AE68C5981880308E00962506 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE68C5971880308E00962506 /* SystemConfiguration.framework */; };
 		AE68C59A1880309800962506 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE68C5991880309800962506 /* CoreLocation.framework */; };
 		AE68C5A318803DA600962506 /* libEstimoteSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AE68C5A218803DA600962506 /* libEstimoteSDK.a */; };
@@ -77,6 +79,9 @@
 		24D32B3418804047007C4057 /* FYFStartGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FYFStartGameViewController.m; path = Classes/Controllers/FYFStartGameViewController.m; sourceTree = "<group>"; };
 		24D32B3818804C33007C4057 /* FYFStartGameView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FYFStartGameView.h; path = Classes/Views/FYFStartGameView.h; sourceTree = "<group>"; };
 		24D32B3918804C33007C4057 /* FYFStartGameView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FYFStartGameView.m; path = Classes/Views/FYFStartGameView.m; sourceTree = "<group>"; };
+		24D32B3C18805DC4007C4057 /* FYFBeaconView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FYFBeaconView.h; path = Classes/Views/FYFBeaconView.h; sourceTree = "<group>"; };
+		24D32B3D18805DC4007C4057 /* FYFBeaconView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FYFBeaconView.m; path = Classes/Views/FYFBeaconView.m; sourceTree = "<group>"; };
+		24D32B3F18806A7D007C4057 /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background.jpg; sourceTree = "<group>"; };
 		8DA6F90328D64B6393F3F883 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		AE68C5971880308E00962506 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		AE68C5991880309800962506 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -210,6 +215,7 @@
 		2041C02C18802BA800503B09 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				24D32B3F18806A7D007C4057 /* background.jpg */,
 				2041C02D18802BA800503B09 /* Images.xcassets */,
 			);
 			name = Resources;
@@ -238,6 +244,8 @@
 		2041C03718803FB900503B09 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				24D32B3C18805DC4007C4057 /* FYFBeaconView.h */,
+				24D32B3D18805DC4007C4057 /* FYFBeaconView.m */,
 				2041C03818803FD500503B09 /* FYFBoardView.h */,
 				2041C03918803FD500503B09 /* FYFBoardView.m */,
 			);
@@ -392,6 +400,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24D32B4018806A7D007C4057 /* background.jpg in Resources */,
 				2041C0011880283E00503B09 /* InfoPlist.strings in Resources */,
 				2041C02E18802BA800503B09 /* Images.xcassets in Resources */,
 			);
@@ -448,6 +457,7 @@
 				24D32B3218803EF7007C4057 /* FYFGameListViewController.m in Sources */,
 				2041C04418804CBD00503B09 /* FYFSocketManager.m in Sources */,
 				2041C03218802BE000503B09 /* FYFViewController.m in Sources */,
+				24D32B3E18805DC4007C4057 /* FYFBeaconView.m in Sources */,
 				2041C041188042D800503B09 /* FYFLocationObject.m in Sources */,
 				2041C03A18803FD500503B09 /* FYFBoardView.m in Sources */,
 				2041C0071880283E00503B09 /* AppDelegate.m in Sources */,
