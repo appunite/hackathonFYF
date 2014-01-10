@@ -8,6 +8,7 @@
 
 #import "FYFGameListViewController.h"
 #import "FYFStartGameViewController.h"
+#import "FYFBoardViewController.h"
 
 @interface FYFGameListViewController ()
 
@@ -64,8 +65,8 @@ static NSString *CellIdentifier = @"Cell";
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    FYFStartGameViewController *startGameViewController = [[FYFStartGameViewController alloc] init];
-    [self.navigationController presentViewController:startGameViewController animated:YES completion:nil];
+    FYFBoardViewController *boardGameViewController = [[FYFBoardViewController alloc] init];
+    [self.navigationController pushViewController:boardGameViewController animated:YES];
 }
 
 

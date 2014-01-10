@@ -8,6 +8,7 @@
 
 //Controllers
 #import "FYFBoardViewController.h"
+#import "FYFStartGameViewController.h"
 
 //Views
 #import "FYFBoardView.h"
@@ -40,6 +41,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
+    [self showReadyViewController];
+}
+
+- (void)showReadyViewController {
+    FYFStartGameViewController *readyViewController = [[FYFStartGameViewController alloc] init];
+    [self.navigationController presentViewController:readyViewController animated:YES completion:nil];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
