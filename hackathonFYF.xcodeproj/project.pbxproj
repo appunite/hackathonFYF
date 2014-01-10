@@ -31,6 +31,7 @@
 		AE68C5A318803DA600962506 /* libEstimoteSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AE68C5A218803DA600962506 /* libEstimoteSDK.a */; };
 		AE68C5A718805E0900962506 /* CountdownView.m in Sources */ = {isa = PBXBuildFile; fileRef = AE68C5A618805E0900962506 /* CountdownView.m */; };
 		AE68C5AD18806EE400962506 /* LoserView.m in Sources */ = {isa = PBXBuildFile; fileRef = AE68C5AC18806EE400962506 /* LoserView.m */; };
+		AE68C5B01880791200962506 /* SuccessView.m in Sources */ = {isa = PBXBuildFile; fileRef = AE68C5AF1880791200962506 /* SuccessView.m */; };
 		BC5092D5F4564B6B825FA49A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C4213E8AC7D14B269A16DC83 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -88,6 +89,8 @@
 		AE68C5A618805E0900962506 /* CountdownView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CountdownView.m; path = Classes/Views/CountdownView.m; sourceTree = "<group>"; };
 		AE68C5AB18806EE400962506 /* LoserView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoserView.h; path = Classes/Views/LoserView.h; sourceTree = "<group>"; };
 		AE68C5AC18806EE400962506 /* LoserView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoserView.m; path = Classes/Views/LoserView.m; sourceTree = "<group>"; };
+		AE68C5AE1880791200962506 /* SuccessView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SuccessView.h; path = Classes/Views/SuccessView.h; sourceTree = "<group>"; };
+		AE68C5AF1880791200962506 /* SuccessView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SuccessView.m; path = Classes/Views/SuccessView.m; sourceTree = "<group>"; };
 		C4213E8AC7D14B269A16DC83 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -296,6 +299,8 @@
 				AE68C5A618805E0900962506 /* CountdownView.m */,
 				AE68C5AB18806EE400962506 /* LoserView.h */,
 				AE68C5AC18806EE400962506 /* LoserView.m */,
+				AE68C5AE1880791200962506 /* SuccessView.h */,
+				AE68C5AF1880791200962506 /* SuccessView.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -440,6 +445,7 @@
 				2041C03A18803FD500503B09 /* FYFBoardView.m in Sources */,
 				2041C0071880283E00503B09 /* AppDelegate.m in Sources */,
 				AE68C5A718805E0900962506 /* CountdownView.m in Sources */,
+				AE68C5B01880791200962506 /* SuccessView.m in Sources */,
 				2041C0031880283E00503B09 /* main.m in Sources */,
 				AE68C5AD18806EE400962506 /* LoserView.m in Sources */,
 				2041C03618803FB100503B09 /* FYFBoardViewController.m in Sources */,
@@ -560,6 +566,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8DA6F90328D64B6393F3F883 /* Pods.xcconfig */;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -570,6 +577,7 @@
 					"${SRCROOT}/Frameworks/Estimote/EstimoteSDK",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = "armv7 armv7s arm64";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -578,6 +586,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8DA6F90328D64B6393F3F883 /* Pods.xcconfig */;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -588,6 +597,7 @@
 					"${SRCROOT}/Frameworks/Estimote/EstimoteSDK",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = "armv7 armv7s arm64";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

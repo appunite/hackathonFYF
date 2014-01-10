@@ -21,5 +21,6 @@
 @property (nonatomic, weak) id<CountdownViewDelegate> animationDelegate;
 
 - (void)startAnimation;
+- (void)animationWithText:(NSString*)text completion:(void (^)(BOOL))completion;
 
 @end

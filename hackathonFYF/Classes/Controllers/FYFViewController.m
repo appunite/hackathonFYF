@@ -27,6 +27,7 @@
     _beaconManager.avoidUnknownStateBeacons = YES;
     
     ESTBeaconRegion* region = [[ESTBeaconRegion alloc] initRegionWithIdentifier:@"EstimoteSampleRegion"];
+    [_beaconManager startRangingBeaconsInRegion:region];
     [_beaconManager startEstimoteBeaconsDiscoveryForRegion:region];
     
     _beaconLabel = [[UILabel alloc] initWithFrame:self.view.bounds];
@@ -53,7 +54,7 @@
         
         ESTBeacon * beacon = [sortedBeacons firstObject];
         
-        if (beacon.proximity == CLProximityNear) {
+        if (beacon.rssi <= -50) {
             [_beaconLabel setText:[NSString stringWithFormat:@"Nearest beacon:\nMajor:%@\nMinor:%@\nDistance:%@, %ld",beacon.major, beacon.minor, beacon.distance, (long)beacon.rssi]];
         }
     }

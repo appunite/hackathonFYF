@@ -9,11 +9,15 @@
 
 //Controllers
 #import "FYFBoardViewController.h"
+#import "FYFSocketManager.h"
 
 //Views
 #import "FYFBoardView.h"
 
-@interface FYFBoardViewController ()
+@interface FYFBoardViewController () {
+    ESTBeaconManager * _beaconManager;
+    BOOL _canRange;
+}
 
 @end
 
@@ -21,6 +25,7 @@
     FYFBoardView *_boardView;
     CountdownView * _countdownView;
     LoserView * _loserView;
+    SuccessView * _successView;
 }
 
 - (void)loadView {
@@ -39,6 +44,10 @@
     _loserView = [[LoserView alloc] initWithFrame:rect];
     [_loserView setAnimationDelegate:self];
     [view addSubview:_loserView];
+    
+    _successView = [[SuccessView alloc] initWithFrame:rect];
+    [_successView setAnimationDelegate:self];
+    [view addSubview:_successView];
     
     // save weak referance
     _boardView = view;
@@ -76,6 +85,21 @@
                                                       [_boardView addBeacons:5];
                                                   }];
     
+    [[NSNotificationCenter defaultCenter] addObserverForName:FYFSocketManagerCapturedMessageNotification
+                                                      object:nil
+                                                       queue:[NSOperationQueue mainQueue]
+                                                  usingBlock:^(NSNotification *note) {
+                                                      [_successView startAnimation];
+                                                  }];
+    
+    _beaconManager = [[ESTBeaconManager alloc] init];
+    _beaconManager.delegate = self;
+    _beaconManager.avoidUnknownStateBeacons = YES;
+    _canRange = NO;
+    
+    ESTBeaconRegion* region = [[ESTBeaconRegion alloc] initRegionWithIdentifier:@"EstimoteSampleRegion"];
+    [_beaconManager startRangingBeaconsInRegion:region];
+    [_beaconManager startEstimoteBeaconsDiscoveryForRegion:region];
 }
 
 #pragma mark -
@@ -85,12 +109,28 @@
 #pragma mark CountdownView
 
 - (void)countdownViewdidFinishCounting:(CountdownView *)countdownView {
-    if ([countdownView isEqual:_countdownView]) {
-        NSLog(@"move bitch!");
-    } else {
-        NSLog(@"lose bitch!");
-    }
-
+    _canRange = ([countdownView isEqual:_countdownView]);
 }
+
+#pragma mark - Beacons delegate
+
+- (void)beaconManager:(ESTBeaconManager *)manager didDiscoverBeacons:(NSArray *)beacons inRegion:(ESTBeaconRegion *)region {
+    
+    if([beacons count] > 0 && _canRange) {
+        
+        NSPredicate * predicate = [NSPredicate predicateWithFormat:@"rssi != 0"];
+        NSArray * noZeroRssi = [beacons filteredArrayUsingPredicate:predicate];
+        
+        NSSortDescriptor * sortDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"rssi" ascending:NO];
+        NSArray * sortedBeacons = [noZeroRssi sortedArrayUsingDescriptors:@[sortDescriptor]];
+        
+        ESTBeacon * beacon = [sortedBeacons firstObject];
+        
+        if (beacon.rssi <= -50) {
+            [[FYFSocketManager sharedManager] announcePresenceOfBeaconWithMinor:beacon.minor];
+        }
+    }
+}
+
 
 @end

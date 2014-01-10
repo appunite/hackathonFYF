@@ -8,10 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+#import "ESTBeaconManager.h"
+
 //Views
 #import "CountdownView.h"
 #import "LoserView.h"
+#import "SuccessView.h"
 
-@interface FYFBoardViewController : UIViewController<CountdownViewDelegate>
+@interface FYFBoardViewController : UIViewController<CountdownViewDelegate> 
 
 @end
