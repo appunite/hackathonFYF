@@ -1,0 +1,535 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2041BFF71880283E00503B09 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2041BFF61880283E00503B09 /* Foundation.framework */; };
+		2041BFF91880283E00503B09 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2041BFF81880283E00503B09 /* CoreGraphics.framework */; };
+		2041BFFB1880283E00503B09 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2041BFFA1880283E00503B09 /* UIKit.framework */; };
+		2041C0011880283E00503B09 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2041BFFF1880283E00503B09 /* InfoPlist.strings */; };
+		2041C0031880283E00503B09 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2041C0021880283E00503B09 /* main.m */; };
+		2041C0071880283E00503B09 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2041C0061880283E00503B09 /* AppDelegate.m */; };
+		2041C0161880283F00503B09 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2041C0151880283F00503B09 /* XCTest.framework */; };
+		2041C0171880283F00503B09 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2041BFF61880283E00503B09 /* Foundation.framework */; };
+		2041C0181880283F00503B09 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2041BFFA1880283E00503B09 /* UIKit.framework */; };
+		2041C0201880283F00503B09 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2041C01E1880283F00503B09 /* InfoPlist.strings */; };
+		2041C0221880283F00503B09 /* hackathonFYFTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2041C0211880283F00503B09 /* hackathonFYFTests.m */; };
+		2041C02E18802BA800503B09 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2041C02D18802BA800503B09 /* Images.xcassets */; };
+		2041C03218802BE000503B09 /* FYFViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2041C03118802BE000503B09 /* FYFViewController.m */; };
+		BC5092D5F4564B6B825FA49A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C4213E8AC7D14B269A16DC83 /* libPods.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2041C0191880283F00503B09 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2041BFEB1880283E00503B09 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2041BFF21880283E00503B09;
+			remoteInfo = hackathonFYF;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2041BFF31880283E00503B09 /* hackathonFYF.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hackathonFYF.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2041BFF61880283E00503B09 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		2041BFF81880283E00503B09 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		2041BFFA1880283E00503B09 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		2041BFFE1880283E00503B09 /* hackathonFYF-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "hackathonFYF-Info.plist"; sourceTree = "<group>"; };
+		2041C0001880283E00503B09 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		2041C0021880283E00503B09 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2041C0041880283E00503B09 /* hackathonFYF-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "hackathonFYF-Prefix.pch"; sourceTree = "<group>"; };
+		2041C0051880283E00503B09 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		2041C0061880283E00503B09 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		2041C0141880283F00503B09 /* hackathonFYFTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = hackathonFYFTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2041C0151880283F00503B09 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		2041C01D1880283F00503B09 /* hackathonFYFTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "hackathonFYFTests-Info.plist"; sourceTree = "<group>"; };
+		2041C01F1880283F00503B09 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		2041C0211880283F00503B09 /* hackathonFYFTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = hackathonFYFTests.m; sourceTree = "<group>"; };
+		2041C02D18802BA800503B09 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		2041C03018802BE000503B09 /* FYFViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FYFViewController.h; path = Classes/Controllers/FYFViewController.h; sourceTree = "<group>"; };
+		2041C03118802BE000503B09 /* FYFViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FYFViewController.m; path = Classes/Controllers/FYFViewController.m; sourceTree = "<group>"; };
+		8DA6F90328D64B6393F3F883 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		C4213E8AC7D14B269A16DC83 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2041BFF01880283E00503B09 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2041BFF91880283E00503B09 /* CoreGraphics.framework in Frameworks */,
+				2041BFFB1880283E00503B09 /* UIKit.framework in Frameworks */,
+				2041BFF71880283E00503B09 /* Foundation.framework in Frameworks */,
+				BC5092D5F4564B6B825FA49A /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2041C0111880283F00503B09 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2041C0161880283F00503B09 /* XCTest.framework in Frameworks */,
+				2041C0181880283F00503B09 /* UIKit.framework in Frameworks */,
+				2041C0171880283F00503B09 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2041BFEA1880283E00503B09 = {
+			isa = PBXGroup;
+			children = (
+				2041BFFC1880283E00503B09 /* Classes */,
+				2041C02C18802BA800503B09 /* Resources */,
+				2041BFF51880283E00503B09 /* Frameworks */,
+				2041BFF41880283E00503B09 /* Products */,
+				2041C02F18802BB400503B09 /* Others */,
+				8DA6F90328D64B6393F3F883 /* Pods.xcconfig */,
+			);
+			sourceTree = "<group>";
+		};
+		2041BFF41880283E00503B09 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2041BFF31880283E00503B09 /* hackathonFYF.app */,
+				2041C0141880283F00503B09 /* hackathonFYFTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2041BFF51880283E00503B09 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2041BFF61880283E00503B09 /* Foundation.framework */,
+				2041BFF81880283E00503B09 /* CoreGraphics.framework */,
+				2041BFFA1880283E00503B09 /* UIKit.framework */,
+				2041C0151880283F00503B09 /* XCTest.framework */,
+				C4213E8AC7D14B269A16DC83 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2041BFFC1880283E00503B09 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				2041C0051880283E00503B09 /* AppDelegate.h */,
+				2041C0061880283E00503B09 /* AppDelegate.m */,
+				2041C02B1880286900503B09 /* Controllers */,
+				2041BFFD1880283E00503B09 /* Supporting Files */,
+			);
+			name = Classes;
+			path = hackathonFYF;
+			sourceTree = "<group>";
+		};
+		2041BFFD1880283E00503B09 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2041BFFE1880283E00503B09 /* hackathonFYF-Info.plist */,
+				2041BFFF1880283E00503B09 /* InfoPlist.strings */,
+				2041C0021880283E00503B09 /* main.m */,
+				2041C0041880283E00503B09 /* hackathonFYF-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2041C01B1880283F00503B09 /* hackathonFYFTests */ = {
+			isa = PBXGroup;
+			children = (
+				2041C0211880283F00503B09 /* hackathonFYFTests.m */,
+				2041C01C1880283F00503B09 /* Supporting Files */,
+			);
+			path = hackathonFYFTests;
+			sourceTree = "<group>";
+		};
+		2041C01C1880283F00503B09 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2041C01D1880283F00503B09 /* hackathonFYFTests-Info.plist */,
+				2041C01E1880283F00503B09 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2041C02B1880286900503B09 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				2041C03018802BE000503B09 /* FYFViewController.h */,
+				2041C03118802BE000503B09 /* FYFViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		2041C02C18802BA800503B09 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2041C02D18802BA800503B09 /* Images.xcassets */,
+			);
+			name = Resources;
+			path = hackathonFYF/Resources;
+			sourceTree = "<group>";
+		};
+		2041C02F18802BB400503B09 /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				2041C01B1880283F00503B09 /* hackathonFYFTests */,
+			);
+			name = Others;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2041BFF21880283E00503B09 /* hackathonFYF */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2041C0251880283F00503B09 /* Build configuration list for PBXNativeTarget "hackathonFYF" */;
+			buildPhases = (
+				884E1D69168D42728A815649 /* Check Pods Manifest.lock */,
+				2041BFEF1880283E00503B09 /* Sources */,
+				2041BFF01880283E00503B09 /* Frameworks */,
+				2041BFF11880283E00503B09 /* Resources */,
+				1A2E0FF134154B308EFB847A /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = hackathonFYF;
+			productName = hackathonFYF;
+			productReference = 2041BFF31880283E00503B09 /* hackathonFYF.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2041C0131880283F00503B09 /* hackathonFYFTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2041C0281880283F00503B09 /* Build configuration list for PBXNativeTarget "hackathonFYFTests" */;
+			buildPhases = (
+				2041C0101880283F00503B09 /* Sources */,
+				2041C0111880283F00503B09 /* Frameworks */,
+				2041C0121880283F00503B09 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2041C01A1880283F00503B09 /* PBXTargetDependency */,
+			);
+			name = hackathonFYFTests;
+			productName = hackathonFYFTests;
+			productReference = 2041C0141880283F00503B09 /* hackathonFYFTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2041BFEB1880283E00503B09 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = FYF;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = AppUnite.com;
+				TargetAttributes = {
+					2041C0131880283F00503B09 = {
+						TestTargetID = 2041BFF21880283E00503B09;
+					};
+				};
+			};
+			buildConfigurationList = 2041BFEE1880283E00503B09 /* Build configuration list for PBXProject "hackathonFYF" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2041BFEA1880283E00503B09;
+			productRefGroup = 2041BFF41880283E00503B09 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2041BFF21880283E00503B09 /* hackathonFYF */,
+				2041C0131880283F00503B09 /* hackathonFYFTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2041BFF11880283E00503B09 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2041C0011880283E00503B09 /* InfoPlist.strings in Resources */,
+				2041C02E18802BA800503B09 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2041C0121880283F00503B09 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2041C0201880283F00503B09 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1A2E0FF134154B308EFB847A /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		884E1D69168D42728A815649 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2041BFEF1880283E00503B09 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2041C03218802BE000503B09 /* FYFViewController.m in Sources */,
+				2041C0071880283E00503B09 /* AppDelegate.m in Sources */,
+				2041C0031880283E00503B09 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2041C0101880283F00503B09 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2041C0221880283F00503B09 /* hackathonFYFTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2041C01A1880283F00503B09 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2041BFF21880283E00503B09 /* hackathonFYF */;
+			targetProxy = 2041C0191880283F00503B09 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2041BFFF1880283E00503B09 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2041C0001880283E00503B09 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		2041C01E1880283F00503B09 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2041C01F1880283F00503B09 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2041C0231880283F00503B09 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		2041C0241880283F00503B09 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2041C0261880283F00503B09 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8DA6F90328D64B6393F3F883 /* Pods.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "hackathonFYF/hackathonFYF-Prefix.pch";
+				INFOPLIST_FILE = "hackathonFYF/hackathonFYF-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		2041C0271880283F00503B09 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8DA6F90328D64B6393F3F883 /* Pods.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "hackathonFYF/hackathonFYF-Prefix.pch";
+				INFOPLIST_FILE = "hackathonFYF/hackathonFYF-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		2041C0291880283F00503B09 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/hackathonFYF.app/hackathonFYF";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "hackathonFYF/hackathonFYF-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "hackathonFYFTests/hackathonFYFTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		2041C02A1880283F00503B09 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/hackathonFYF.app/hackathonFYF";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "hackathonFYF/hackathonFYF-Prefix.pch";
+				INFOPLIST_FILE = "hackathonFYFTests/hackathonFYFTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2041BFEE1880283E00503B09 /* Build configuration list for PBXProject "hackathonFYF" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2041C0231880283F00503B09 /* Debug */,
+				2041C0241880283F00503B09 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2041C0251880283F00503B09 /* Build configuration list for PBXNativeTarget "hackathonFYF" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2041C0261880283F00503B09 /* Debug */,
+				2041C0271880283F00503B09 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2041C0281880283F00503B09 /* Build configuration list for PBXNativeTarget "hackathonFYFTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2041C0291880283F00503B09 /* Debug */,
+				2041C02A1880283F00503B09 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2041BFEB1880283E00503B09 /* Project object */;
+}
