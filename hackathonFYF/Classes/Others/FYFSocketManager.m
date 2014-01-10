@@ -71,9 +71,9 @@ NSString * const FYFSocketManagerFinishedMessageNotification = @"FYFSocketManage
     
     NSError *error = nil;
     // pars message response
-    NSDictionary *json = [NSJSONSerialization JSONObjectWithData:message
-                                                    options:NSJSONReadingMutableContainers
-                                                      error:&error];
+    NSDictionary *json = [NSJSONSerialization JSONObjectWithData:[message dataUsingEncoding:NSUTF8StringEncoding]
+                                                         options:NSJSONReadingMutableContainers
+                                                           error:&error];
     
     // get message type
     NSString *messageType = json[@"type"];
@@ -108,9 +108,7 @@ NSString * const FYFSocketManagerFinishedMessageNotification = @"FYFSocketManage
                                                           userInfo:message];
     }
     
-    else {
-        NSLog(@"Received \"%@\"", message);
-    }
+    NSLog(@"Received \"%@\"", json);
 }
 
 - (void)webSocketDidOpen:(SRWebSocket *)webSocket {
