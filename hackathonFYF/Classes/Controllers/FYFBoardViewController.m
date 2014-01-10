@@ -16,6 +16,7 @@
 
 //Views
 #import "FYFBoardView.h"
+#import "WaitingForPlayersView.h"
 
 @interface FYFBoardViewController () {
     ESTBeaconManager * _beaconManager;
@@ -30,6 +31,7 @@
     CountdownView * _goView;
     LoserView * _loserView;
     SuccessView * _successView;
+    WaitingForPlayersView *_waitingView;
 }
 
 - (void)loadView {
@@ -57,6 +59,10 @@
     [_successView setAnimationDelegate:self];
     [view addSubview:_successView];
     
+    _waitingView = [[WaitingForPlayersView alloc] initWithFrame:rect];
+    [_waitingView setAnimationDelegate:self];
+    [view addSubview:_waitingView];
+    
     // save weak referance
     _boardView = view;
 }
@@ -82,9 +88,11 @@
                                                       object:nil
                                                        queue:[NSOperationQueue mainQueue]
                                                   usingBlock:^(NSNotification *note) {
-
                                                       NSString * time = [NSString stringWithFormat:@"%@",[[note userInfo] objectForKey:@"time"]];
-                                                      [_countdownView startAnimationWithTime:time];
+                                                      [_waitingView removeFromSuperview];
+													  [_countdownView startAnimationWithTime:time];
+                                                      
+                                                      [_boardView removeBeacons];
                                                   }];
     
     [[NSNotificationCenter defaultCenter] addObserverForName:FYFSocketManagerOccupatedMessageNotification
@@ -109,6 +117,16 @@
                                                   usingBlock:^(NSNotification *note) {
                                                       [_successView startAnimation];
                                                   }];
+    
+    [[NSNotificationCenter defaultCenter] addObserverForName:FYFSocketManagerWaitingMessageNotification
+
+                                                      object:nil
+                                                       queue:[NSOperationQueue mainQueue]
+                                                  usingBlock:^(NSNotification *note) {
+                                                      [_waitingView startAnimation];
+                                                  }];
+    
+    
     
     _beaconManager = [[ESTBeaconManager alloc] init];
     _beaconManager.delegate = self;

@@ -27,6 +27,7 @@
 		24D32B3218803EF7007C4057 /* FYFGameListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24D32B3118803EF7007C4057 /* FYFGameListViewController.m */; };
 		24D32B3E18805DC4007C4057 /* FYFBeaconView.m in Sources */ = {isa = PBXBuildFile; fileRef = 24D32B3D18805DC4007C4057 /* FYFBeaconView.m */; };
 		24D32B4018806A7D007C4057 /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 24D32B3F18806A7D007C4057 /* background.jpg */; };
+		24D32B43188080F1007C4057 /* WaitingForPlayersView.m in Sources */ = {isa = PBXBuildFile; fileRef = 24D32B42188080F1007C4057 /* WaitingForPlayersView.m */; };
 		AE68C5981880308E00962506 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE68C5971880308E00962506 /* SystemConfiguration.framework */; };
 		AE68C59A1880309800962506 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE68C5991880309800962506 /* CoreLocation.framework */; };
 		AE68C5A318803DA600962506 /* libEstimoteSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AE68C5A218803DA600962506 /* libEstimoteSDK.a */; };
@@ -78,6 +79,8 @@
 		24D32B3C18805DC4007C4057 /* FYFBeaconView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FYFBeaconView.h; path = Classes/Views/FYFBeaconView.h; sourceTree = "<group>"; };
 		24D32B3D18805DC4007C4057 /* FYFBeaconView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FYFBeaconView.m; path = Classes/Views/FYFBeaconView.m; sourceTree = "<group>"; };
 		24D32B3F18806A7D007C4057 /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background.jpg; sourceTree = "<group>"; };
+		24D32B41188080F1007C4057 /* WaitingForPlayersView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WaitingForPlayersView.h; path = Classes/Views/WaitingForPlayersView.h; sourceTree = "<group>"; };
+		24D32B42188080F1007C4057 /* WaitingForPlayersView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WaitingForPlayersView.m; path = Classes/Views/WaitingForPlayersView.m; sourceTree = "<group>"; };
 		8DA6F90328D64B6393F3F883 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		AE68C5971880308E00962506 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		AE68C5991880309800962506 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -305,6 +308,8 @@
 				AE68C5AC18806EE400962506 /* LoserView.m */,
 				AE68C5AE1880791200962506 /* SuccessView.h */,
 				AE68C5AF1880791200962506 /* SuccessView.m */,
+				24D32B41188080F1007C4057 /* WaitingForPlayersView.h */,
+				24D32B42188080F1007C4057 /* WaitingForPlayersView.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -448,6 +453,7 @@
 				24D32B3218803EF7007C4057 /* FYFGameListViewController.m in Sources */,
 				2041C04418804CBD00503B09 /* FYFSocketManager.m in Sources */,
 				2041C03218802BE000503B09 /* FYFViewController.m in Sources */,
+				24D32B43188080F1007C4057 /* WaitingForPlayersView.m in Sources */,
 				24D32B3E18805DC4007C4057 /* FYFBeaconView.m in Sources */,
 				2041C03A18803FD500503B09 /* FYFBoardView.m in Sources */,
 				2041C0071880283E00503B09 /* AppDelegate.m in Sources */,
