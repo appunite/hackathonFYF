@@ -54,11 +54,12 @@
     NSInteger i = 1;
     
     for (FYFBeaconView *b in _beacons) {
-        y = 50.0f * i;
+        y = 90.0f * i;
         CGRect rect = CGRectMake(x, y, beaconSize.width, beaconSize.height);
         [b setFrame:rect];
         if (i == 3) {
             x = CGRectGetMaxX(self.bounds) - 60.0f;
+            y = 30.0f;
             i = 1;
         }
         i++;

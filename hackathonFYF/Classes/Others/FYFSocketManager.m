@@ -85,25 +85,25 @@ NSString * const FYFSocketManagerWaitingMessageNotification = @"FYFSocketManager
                                                           userInfo:message];
     }
 
-    else if ([message isEqualToString:@"started"]) {
+    else if ([messageType isEqualToString:@"started"]) {
         [[NSNotificationCenter defaultCenter] postNotificationName:FYFSocketManagerStartedMessageNotification
                                                             object:self
                                                           userInfo:message];
     }
 
-    else if ([message isEqualToString:@"beacon_occupated"]) {
+    else if ([messageType isEqualToString:@"beacon_occupated"]) {
         [[NSNotificationCenter defaultCenter] postNotificationName:FYFSocketManagerOccupatedMessageNotification
                                                             object:self
                                                           userInfo:message];
     }
 
-    else if ([message isEqualToString:@"beacon_got"]) {
+    else if ([messageType isEqualToString:@"beacon_got"]) {
         [[NSNotificationCenter defaultCenter] postNotificationName:FYFSocketManagerCapturedMessageNotification
                                                             object:self
                                                           userInfo:message];
     }
     
-    else if ([message isEqualToString:@"end"]) {
+    else if ([messageType isEqualToString:@"end"]) {
         [[NSNotificationCenter defaultCenter] postNotificationName:FYFSocketManagerFinishedMessageNotification
                                                             object:self
                                                           userInfo:message];

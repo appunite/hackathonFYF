@@ -1,3 +1,4 @@
+
 //
 //  FYFBoardViewController.m
 //  hackathonFYF
@@ -52,8 +53,7 @@
         [[FYFSocketManager sharedManager] reconnect];
     }
     
-    [_boardView addBeacons:5];
-    
+
     [self.navigationController setNavigationBarHidden:YES];
     
     [[NSNotificationCenter defaultCenter] addObserverForName:FYFSocketManagerCountdownMessageNotification
@@ -69,6 +69,13 @@
                                                   usingBlock:^(NSNotification *note) {
                                                       [_loserView startAnimation];
                                                   }];
+    [[NSNotificationCenter defaultCenter] addObserverForName:FYFSocketManagerStartedMessageNotification
+                                                      object:nil
+                                                       queue:[NSOperationQueue mainQueue]
+                                                  usingBlock:^(NSNotification *note) {
+                                                      [_boardView addBeacons:5];
+                                                  }];
+    
 }
 
 #pragma mark -
@@ -83,6 +90,7 @@
     } else {
         NSLog(@"lose bitch!");
     }
+
 }
 
 @end
