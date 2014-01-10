@@ -50,3 +50,4 @@ extern NSString * const FYFSocketManagerStartedMessageNotification;
 extern NSString * const FYFSocketManagerOccupatedMessageNotification;
 extern NSString * const FYFSocketManagerCapturedMessageNotification;
 extern NSString * const FYFSocketManagerFinishedMessageNotification;
+extern NSString * const FYFSocketManagerWaitingMessageNotification;

@@ -17,6 +17,7 @@ NSString * const FYFSocketManagerStartedMessageNotification = @"FYFSocketManager
 NSString * const FYFSocketManagerOccupatedMessageNotification = @"FYFSocketManager.Notification.Message.Occupated";
 NSString * const FYFSocketManagerCapturedMessageNotification = @"FYFSocketManager.Notification.Message.Captured";
 NSString * const FYFSocketManagerFinishedMessageNotification = @"FYFSocketManager.Notification.Message.Finished";
+NSString * const FYFSocketManagerWaitingMessageNotification = @"FYFSocketManager.Notification.Message.Waiting";
 
 @implementation FYFSocketManager
 
@@ -107,7 +108,13 @@ NSString * const FYFSocketManagerFinishedMessageNotification = @"FYFSocketManage
                                                             object:self
                                                           userInfo:message];
     }
-    
+
+    else if ([messageType isEqualToString:@"waiting_for_clients"]) {
+        [[NSNotificationCenter defaultCenter] postNotificationName:FYFSocketManagerWaitingMessageNotification
+                                                            object:self
+                                                          userInfo:message];
+    }
+
     NSLog(@"Received \"%@\"", json);
 }
 
