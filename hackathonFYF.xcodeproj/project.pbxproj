@@ -22,7 +22,6 @@
 		2041C03218802BE000503B09 /* FYFViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2041C03118802BE000503B09 /* FYFViewController.m */; };
 		2041C03618803FB100503B09 /* FYFBoardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2041C03518803FB100503B09 /* FYFBoardViewController.m */; };
 		2041C03A18803FD500503B09 /* FYFBoardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2041C03918803FD500503B09 /* FYFBoardView.m */; };
-		2041C041188042D800503B09 /* FYFLocationObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 2041C040188042D800503B09 /* FYFLocationObject.m */; };
 		2041C04418804CBD00503B09 /* FYFSocketManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2041C04318804CBD00503B09 /* FYFSocketManager.m */; };
 		24D32B3218803EF7007C4057 /* FYFGameListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24D32B3118803EF7007C4057 /* FYFGameListViewController.m */; };
 		24D32B3E18805DC4007C4057 /* FYFBeaconView.m in Sources */ = {isa = PBXBuildFile; fileRef = 24D32B3D18805DC4007C4057 /* FYFBeaconView.m */; };
@@ -68,8 +67,6 @@
 		2041C03818803FD500503B09 /* FYFBoardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FYFBoardView.h; path = Classes/Views/FYFBoardView.h; sourceTree = "<group>"; };
 		2041C03918803FD500503B09 /* FYFBoardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FYFBoardView.m; path = Classes/Views/FYFBoardView.m; sourceTree = "<group>"; };
 		2041C03C188041D600503B09 /* FYFConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FYFConstants.h; sourceTree = "<group>"; };
-		2041C03F188042D800503B09 /* FYFLocationObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FYFLocationObject.h; path = Classes/Models/FYFLocationObject.h; sourceTree = "<group>"; };
-		2041C040188042D800503B09 /* FYFLocationObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FYFLocationObject.m; path = Classes/Models/FYFLocationObject.m; sourceTree = "<group>"; };
 		2041C04218804CBD00503B09 /* FYFSocketManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FYFSocketManager.h; path = Classes/Others/FYFSocketManager.h; sourceTree = "<group>"; };
 		2041C04318804CBD00503B09 /* FYFSocketManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FYFSocketManager.m; path = Classes/Others/FYFSocketManager.m; sourceTree = "<group>"; };
 		24D32B3018803EF7007C4057 /* FYFGameListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FYFGameListViewController.h; path = Classes/Controllers/FYFGameListViewController.h; sourceTree = "<group>"; };
@@ -232,7 +229,6 @@
 			children = (
 				2041C03418803FB100503B09 /* FYFBoardViewController.h */,
 				2041C03518803FB100503B09 /* FYFBoardViewController.m */,
-				2041C03E1880425200503B09 /* Modles */,
 				2041C03718803FB900503B09 /* Views */,
 			);
 			name = BoardViewController;
@@ -257,15 +253,6 @@
 				2041C04318804CBD00503B09 /* FYFSocketManager.m */,
 			);
 			name = Others;
-			sourceTree = "<group>";
-		};
-		2041C03E1880425200503B09 /* Modles */ = {
-			isa = PBXGroup;
-			children = (
-				2041C03F188042D800503B09 /* FYFLocationObject.h */,
-				2041C040188042D800503B09 /* FYFLocationObject.m */,
-			);
-			name = Modles;
 			sourceTree = "<group>";
 		};
 		24D32B3718804266007C4057 /* GameListViewController */ = {
@@ -445,7 +432,6 @@
 				2041C04418804CBD00503B09 /* FYFSocketManager.m in Sources */,
 				2041C03218802BE000503B09 /* FYFViewController.m in Sources */,
 				24D32B3E18805DC4007C4057 /* FYFBeaconView.m in Sources */,
-				2041C041188042D800503B09 /* FYFLocationObject.m in Sources */,
 				2041C03A18803FD500503B09 /* FYFBoardView.m in Sources */,
 				2041C0071880283E00503B09 /* AppDelegate.m in Sources */,
 				AE68C5A718805E0900962506 /* CountdownView.m in Sources */,

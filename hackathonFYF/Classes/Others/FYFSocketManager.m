@@ -8,9 +8,6 @@
 
 #import "FYFSocketManager.h"
 
-//Models
-#import "FYFLocationObject.h"
-
 NSString * const FYFSocketManagerDidOpen = @"FYFSocketManager.Notification.State.Open";
 NSString * const FYFSocketManagerDidClose = @"FYFSocketManager.Notification.State.Close";
 NSString * const FYFSocketManagerDidFail = @"FYFSocketManager.Notification.State.Fail";
