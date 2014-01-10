@@ -22,6 +22,7 @@
         [_counterLabel setTextAlignment:NSTextAlignmentCenter];
         [_counterLabel setFont:[UIFont fontWithName:@"HelveticaNeue-Light" size:180]];
         [_counterLabel setAlpha:0];
+        [_counterLabel setNumberOfLines:0];
         [self addSubview:_counterLabel];
     }
     return self;

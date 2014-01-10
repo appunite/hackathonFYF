@@ -10,6 +10,7 @@
 
 //Views
 #import "CountdownView.h"
+#import "LoserView.h"
 
 @interface FYFBoardViewController : UIViewController<CountdownViewDelegate>
 

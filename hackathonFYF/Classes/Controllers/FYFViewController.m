@@ -27,10 +27,7 @@
     _beaconManager.avoidUnknownStateBeacons = YES;
     
     ESTBeaconRegion* region = [[ESTBeaconRegion alloc] initRegionWithIdentifier:@"EstimoteSampleRegion"];
-    
-    [_beaconManager startMonitoringForRegion:region];
-    [_beaconManager requestStateForRegion:region];
-    [_beaconManager startRangingBeaconsInRegion:region];
+    [_beaconManager startEstimoteBeaconsDiscoveryForRegion:region];
     
     _beaconLabel = [[UILabel alloc] initWithFrame:self.view.bounds];
     [_beaconLabel setTextAlignment:NSTextAlignmentCenter];
@@ -42,9 +39,9 @@
     [super viewDidAppear:animated];
 }
 
--(void)beaconManager:(ESTBeaconManager *)manager
-     didRangeBeacons:(NSArray *)beacons
-            inRegion:(ESTBeaconRegion *)region {
+#pragma mark - Beacons delegate
+
+- (void)beaconManager:(ESTBeaconManager *)manager didDiscoverBeacons:(NSArray *)beacons inRegion:(ESTBeaconRegion *)region {
     
     if([beacons count] > 0) {
         
@@ -61,6 +58,5 @@
         }
     }
 }
-
 
 @end

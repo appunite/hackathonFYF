@@ -19,6 +19,7 @@
 @implementation FYFBoardViewController {
     FYFBoardView *_boardView;
     CountdownView * _countdownView;
+    LoserView * _loserView;
 }
 
 - (void)loadView {
@@ -33,6 +34,10 @@
     _countdownView = [[CountdownView alloc] initWithFrame:rect];
     [_countdownView setAnimationDelegate:self];
     [view addSubview:_countdownView];
+    
+    _loserView = [[LoserView alloc] initWithFrame:rect];
+    [_loserView setAnimationDelegate:self];
+    [view addSubview:_loserView];
     
     // save weak referance
     _boardView = view;
@@ -53,6 +58,13 @@
                                                   usingBlock:^(NSNotification *note) {
                                                       [_countdownView startAnimation];
                                                   }];
+    
+    [[NSNotificationCenter defaultCenter] addObserverForName:FYFSocketManagerOccupatedMessageNotification
+                                                      object:nil
+                                                       queue:[NSOperationQueue mainQueue]
+                                                  usingBlock:^(NSNotification *note) {
+                                                      [_loserView startAnimation];
+                                                  }];
 }
 
 #pragma mark -
@@ -62,7 +74,12 @@
 #pragma mark CountdownView
 
 - (void)countdownViewdidFinishCounting:(CountdownView *)countdownView {
-    NSLog(@"move bitch!");
+    
+    if ([countdownView isEqual:_countdownView]) {
+        NSLog(@"move bitch!");
+    } else {
+        NSLog(@"lose bitch!");
+    }
 }
 
 @end

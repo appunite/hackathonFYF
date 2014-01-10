@@ -10,7 +10,7 @@
 #import "ESTBeaconManager.h"
 
 
-@interface FYFViewController : UIViewController {
+@interface FYFViewController : UIViewController<ESTBeaconManagerDelegate> {
     UILabel * _beaconLabel;
 }
 
