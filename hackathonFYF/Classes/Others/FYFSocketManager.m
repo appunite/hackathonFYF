@@ -62,7 +62,8 @@ NSString * const FYFSocketManagerWaitingMessageNotification = @"FYFSocketManager
 }
 
 - (void)announcePresenceOfBeaconWithMinor:(NSNumber *)minor {
-    [_webSocket send:@{@"type": @"found", @"beacon_id": [minor stringValue]}];
+    NSString *string = [NSString stringWithFormat:@"%d", [minor intValue]];
+    [_webSocket send:[NSString stringWithFormat:@"{\"type\": \"found\", \"beacon_id\": %@}", string]];
 }
 
 #pragma mark -

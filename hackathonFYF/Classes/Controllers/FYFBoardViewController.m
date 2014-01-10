@@ -155,7 +155,7 @@
         
         ESTBeacon * beacon = [sortedBeacons firstObject];
         
-        if (beacon.rssi <= -50) {
+        if (beacon.rssi >= -52) {
             [[FYFSocketManager sharedManager] announcePresenceOfBeaconWithMinor:beacon.minor];
         }
     }
