@@ -69,6 +69,7 @@
                                                       object:nil
                                                        queue:[NSOperationQueue mainQueue]
                                                   usingBlock:^(NSNotification *note) {
+                                                      [_boardView removeBeacons];
                                                       [_countdownView startAnimation];
                                                   }];
     
@@ -82,6 +83,7 @@
                                                       object:nil
                                                        queue:[NSOperationQueue mainQueue]
                                                   usingBlock:^(NSNotification *note) {
+                                                      [_boardView removeBeacons];
                                                       [_boardView addBeacons:5];
                                                   }];
     
@@ -100,6 +102,16 @@
     ESTBeaconRegion* region = [[ESTBeaconRegion alloc] initRegionWithIdentifier:@"EstimoteSampleRegion"];
     [_beaconManager startRangingBeaconsInRegion:region];
     [_beaconManager startEstimoteBeaconsDiscoveryForRegion:region];
+
+    [[NSNotificationCenter defaultCenter] addObserverForName:FYFSocketManagerFinishedMessageNotification
+                                                      object:nil
+                                                       queue:[NSOperationQueue mainQueue]
+                                                  usingBlock:^(NSNotification *note) {
+                                                      
+                                                      [_boardView removeBeacons];
+                                                  }];
+    
+    
 }
 
 #pragma mark -
@@ -111,8 +123,8 @@
 - (void)countdownViewdidFinishCounting:(CountdownView *)countdownView {
     _canRange = ([countdownView isEqual:_countdownView]);
 }
-
-#pragma mark - Beacons delegate
+    
+   
 
 - (void)beaconManager:(ESTBeaconManager *)manager didDiscoverBeacons:(NSArray *)beacons inRegion:(ESTBeaconRegion *)region {
     

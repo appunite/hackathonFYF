@@ -11,4 +11,5 @@
 @interface FYFBoardView : UIView
 @property (strong, nonatomic) NSMutableArray *beacons;
 - (void)addBeacons:(NSInteger)beaconsNumber;
+- (void)removeBeacons;
 @end

@@ -42,7 +42,12 @@
     [self setNeedsDisplay];
 }
 
-
+- (void)removeBeacons {
+     for (FYFBeaconView *b in _beacons) {
+         [b removeFromSuperview];
+     }
+    [self setNeedsDisplay];
+}
 
 - (void)layoutSubviews {
     [super layoutSubviews];
