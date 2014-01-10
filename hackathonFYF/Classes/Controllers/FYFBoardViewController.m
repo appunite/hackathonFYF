@@ -8,7 +8,6 @@
 
 //Controllers
 #import "FYFBoardViewController.h"
-#import "FYFStartGameViewController.h"
 
 //Views
 #import "FYFBoardView.h"
@@ -42,17 +41,10 @@
     if (![[FYFSocketManager sharedManager] isConnected]) {
         [[FYFSocketManager sharedManager] reconnect];
     }
-	
-    [self _showReadyViewController];
 }
 
 #pragma mark -
 #pragma mark Private
-
-- (void)_showReadyViewController {
-    FYFStartGameViewController *readyViewController = [[FYFStartGameViewController alloc] init];
-    [self.navigationController presentViewController:readyViewController animated:YES completion:nil];
-}
 
 
 @end

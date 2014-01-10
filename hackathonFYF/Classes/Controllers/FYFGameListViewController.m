@@ -7,7 +7,6 @@
 //
 
 #import "FYFGameListViewController.h"
-#import "FYFStartGameViewController.h"
 #import "FYFBoardViewController.h"
 
 @interface FYFGameListViewController ()

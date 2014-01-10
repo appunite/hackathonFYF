@@ -25,8 +25,6 @@
 		2041C041188042D800503B09 /* FYFLocationObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 2041C040188042D800503B09 /* FYFLocationObject.m */; };
 		2041C04418804CBD00503B09 /* FYFSocketManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2041C04318804CBD00503B09 /* FYFSocketManager.m */; };
 		24D32B3218803EF7007C4057 /* FYFGameListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24D32B3118803EF7007C4057 /* FYFGameListViewController.m */; };
-		24D32B3518804047007C4057 /* FYFStartGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24D32B3418804047007C4057 /* FYFStartGameViewController.m */; };
-		24D32B3A18804C33007C4057 /* FYFStartGameView.m in Sources */ = {isa = PBXBuildFile; fileRef = 24D32B3918804C33007C4057 /* FYFStartGameView.m */; };
 		24D32B3E18805DC4007C4057 /* FYFBeaconView.m in Sources */ = {isa = PBXBuildFile; fileRef = 24D32B3D18805DC4007C4057 /* FYFBeaconView.m */; };
 		24D32B4018806A7D007C4057 /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 24D32B3F18806A7D007C4057 /* background.jpg */; };
 		AE68C5981880308E00962506 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE68C5971880308E00962506 /* SystemConfiguration.framework */; };
@@ -75,10 +73,6 @@
 		2041C04318804CBD00503B09 /* FYFSocketManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FYFSocketManager.m; path = Classes/Others/FYFSocketManager.m; sourceTree = "<group>"; };
 		24D32B3018803EF7007C4057 /* FYFGameListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FYFGameListViewController.h; path = Classes/Controllers/FYFGameListViewController.h; sourceTree = "<group>"; };
 		24D32B3118803EF7007C4057 /* FYFGameListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FYFGameListViewController.m; path = Classes/Controllers/FYFGameListViewController.m; sourceTree = "<group>"; };
-		24D32B3318804047007C4057 /* FYFStartGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FYFStartGameViewController.h; path = Classes/Controllers/FYFStartGameViewController.h; sourceTree = "<group>"; };
-		24D32B3418804047007C4057 /* FYFStartGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FYFStartGameViewController.m; path = Classes/Controllers/FYFStartGameViewController.m; sourceTree = "<group>"; };
-		24D32B3818804C33007C4057 /* FYFStartGameView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FYFStartGameView.h; path = Classes/Views/FYFStartGameView.h; sourceTree = "<group>"; };
-		24D32B3918804C33007C4057 /* FYFStartGameView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FYFStartGameView.m; path = Classes/Views/FYFStartGameView.m; sourceTree = "<group>"; };
 		24D32B3C18805DC4007C4057 /* FYFBeaconView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FYFBeaconView.h; path = Classes/Views/FYFBeaconView.h; sourceTree = "<group>"; };
 		24D32B3D18805DC4007C4057 /* FYFBeaconView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FYFBeaconView.m; path = Classes/Views/FYFBeaconView.m; sourceTree = "<group>"; };
 		24D32B3F18806A7D007C4057 /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background.jpg; sourceTree = "<group>"; };
@@ -206,7 +200,6 @@
 				2041C03018802BE000503B09 /* FYFViewController.h */,
 				2041C03118802BE000503B09 /* FYFViewController.m */,
 				24D32B3718804266007C4057 /* GameListViewController */,
-				24D32B3618804253007C4057 /* StartGameModalViewController */,
 				2041C03318803F9300503B09 /* BoardViewController */,
 			);
 			name = Controllers;
@@ -271,16 +264,6 @@
 			name = Modles;
 			sourceTree = "<group>";
 		};
-		24D32B3618804253007C4057 /* StartGameModalViewController */ = {
-			isa = PBXGroup;
-			children = (
-				24D32B3B18804C38007C4057 /* Views */,
-				24D32B3318804047007C4057 /* FYFStartGameViewController.h */,
-				24D32B3418804047007C4057 /* FYFStartGameViewController.m */,
-			);
-			name = StartGameModalViewController;
-			sourceTree = "<group>";
-		};
 		24D32B3718804266007C4057 /* GameListViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -288,15 +271,6 @@
 				24D32B3118803EF7007C4057 /* FYFGameListViewController.m */,
 			);
 			name = GameListViewController;
-			sourceTree = "<group>";
-		};
-		24D32B3B18804C38007C4057 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				24D32B3818804C33007C4057 /* FYFStartGameView.h */,
-				24D32B3918804C33007C4057 /* FYFStartGameView.m */,
-			);
-			name = Views;
 			sourceTree = "<group>";
 		};
 		AE68C59B18803DA600962506 /* EstimoteSDK */ = {
@@ -462,9 +436,7 @@
 				2041C03A18803FD500503B09 /* FYFBoardView.m in Sources */,
 				2041C0071880283E00503B09 /* AppDelegate.m in Sources */,
 				2041C0031880283E00503B09 /* main.m in Sources */,
-				24D32B3518804047007C4057 /* FYFStartGameViewController.m in Sources */,
 				2041C03618803FB100503B09 /* FYFBoardViewController.m in Sources */,
-				24D32B3A18804C33007C4057 /* FYFStartGameView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
