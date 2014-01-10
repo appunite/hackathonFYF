@@ -19,6 +19,7 @@ NSString * const FYFSocketManagerCountdownMessageNotification = @"FYFSocketManag
 NSString * const FYFSocketManagerStartedMessageNotification = @"FYFSocketManager.Notification.Message.Started";
 NSString * const FYFSocketManagerOccupatedMessageNotification = @"FYFSocketManager.Notification.Message.Occupated";
 NSString * const FYFSocketManagerCapturedMessageNotification = @"FYFSocketManager.Notification.Message.Captured";
+NSString * const FYFSocketManagerFinishedMessageNotification = @"FYFSocketManager.Notification.Message.Finished";
 
 @implementation FYFSocketManager
 
@@ -62,6 +63,10 @@ NSString * const FYFSocketManagerCapturedMessageNotification = @"FYFSocketManage
     return [_webSocket readyState] == SR_OPEN;
 }
 
+- (void)announcePresenceOfBeaconWithMinor:(NSNumber *)minor {
+    [_webSocket send:@{@"type": @"found", @"beacon_id": minor}];
+}
+
 #pragma mark -
 #pragma mark SRWebSocketDelegate
 
@@ -96,6 +101,12 @@ NSString * const FYFSocketManagerCapturedMessageNotification = @"FYFSocketManage
 
     else if ([message isEqualToString:@"beacon_got"]) {
         [[NSNotificationCenter defaultCenter] postNotificationName:FYFSocketManagerCapturedMessageNotification
+                                                            object:self
+                                                          userInfo:message];
+    }
+    
+    else if ([message isEqualToString:@"end"]) {
+        [[NSNotificationCenter defaultCenter] postNotificationName:FYFSocketManagerFinishedMessageNotification
                                                             object:self
                                                           userInfo:message];
     }

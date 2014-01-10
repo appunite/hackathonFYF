@@ -35,6 +35,10 @@
 
 @end
 
+@interface FYFSocketManager (ApiPostMessages)
+- (void)announcePresenceOfBeaconWithMinor:(NSNumber *)minor;
+@end
+
 // Socket state notifications
 extern NSString * const FYFSocketManagerDidOpen;
 extern NSString * const FYFSocketManagerDidClose;
@@ -45,3 +49,4 @@ extern NSString * const FYFSocketManagerCountdownMessageNotification;
 extern NSString * const FYFSocketManagerStartedMessageNotification;
 extern NSString * const FYFSocketManagerOccupatedMessageNotification;
 extern NSString * const FYFSocketManagerCapturedMessageNotification;
+extern NSString * const FYFSocketManagerFinishedMessageNotification;
