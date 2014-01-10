@@ -46,11 +46,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-
+    
     // reconnect view if needed
     if (![[FYFSocketManager sharedManager] isConnected]) {
         [[FYFSocketManager sharedManager] reconnect];
     }
+    
+    [_boardView addBeacons:5];
+    
+    [self.navigationController setNavigationBarHidden:YES];
     
     [[NSNotificationCenter defaultCenter] addObserverForName:FYFSocketManagerCountdownMessageNotification
                                                       object:nil

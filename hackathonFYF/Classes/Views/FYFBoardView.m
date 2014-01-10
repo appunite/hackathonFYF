@@ -33,6 +33,8 @@
     
     for (int i=0; i < beaconsNumber; i++) {
         FYFBeaconView *beacon = [[FYFBeaconView alloc] init];
+        [beacon setAvailable:YES];
+        [beacon startAnimating];
         [self addSubview:beacon];
         [_beacons addObject:beacon];
     }
@@ -59,6 +61,7 @@
             x = CGRectGetMaxX(self.bounds) - 60.0f;
             i = 1;
         }
+        i++;
     }
     
 }
