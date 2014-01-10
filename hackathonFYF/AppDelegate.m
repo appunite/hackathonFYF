@@ -8,7 +8,6 @@
 
 #import "AppDelegate.h"
 #import "FYFGameListViewController.h"
-#import "FYFViewController.h"
 
 @implementation AppDelegate
 

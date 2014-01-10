@@ -80,9 +80,6 @@
     // add pop gesture recognizer
     [self.navigationController.interactivePopGestureRecognizer setDelegate:(id<UIGestureRecognizerDelegate>)self];
     [self.navigationController.interactivePopGestureRecognizer setEnabled:YES];
-
-    // hide navigation bar
-    [self.navigationController setNavigationBarHidden:YES];
     
     [[NSNotificationCenter defaultCenter] addObserverForName:FYFSocketManagerCountdownMessageNotification
                                                       object:nil
@@ -100,6 +97,9 @@
                                                        queue:[NSOperationQueue mainQueue]
                                                   usingBlock:^(NSNotification *note) {
                                                       [_loserView startAnimation];
+
+                                                      // vibrate
+                                                      AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
                                                   }];
 
     [[NSNotificationCenter defaultCenter] addObserverForName:FYFSocketManagerStartedMessageNotification
@@ -108,7 +108,9 @@
                                                   usingBlock:^(NSNotification *note) {
                                                       [_goView startAnimationWithTime:@"GO!"];
                                                       [_boardView addBeacons:5];
-                                                      
+
+                                                      // vibrate
+                                                      AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
                                                   }];
     
     [[NSNotificationCenter defaultCenter] addObserverForName:FYFSocketManagerCapturedMessageNotification
@@ -144,15 +146,23 @@
                                                       
                                                       [_boardView removeBeacons];
                                                   }];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+
+    // hide navigation bar
+    [self.navigationController setNavigationBarHidden:YES];
+}
+
+- (void)viewDidDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
     
-	// testing
-    AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
+    // hide navigation bar
+    [self.navigationController setNavigationBarHidden:NO];
 }
 
 #pragma mark -
-#pragma mark Private
-
-#pragma mark - 
 #pragma mark CountdownView
 
 - (void)countdownViewdidFinishCounting:(CountdownView *)countdownView {

@@ -19,11 +19,11 @@
 		2041C0201880283F00503B09 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2041C01E1880283F00503B09 /* InfoPlist.strings */; };
 		2041C0221880283F00503B09 /* hackathonFYFTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2041C0211880283F00503B09 /* hackathonFYFTests.m */; };
 		2041C02E18802BA800503B09 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2041C02D18802BA800503B09 /* Images.xcassets */; };
-		2041C03218802BE000503B09 /* FYFViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2041C03118802BE000503B09 /* FYFViewController.m */; };
 		2041C03618803FB100503B09 /* FYFBoardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2041C03518803FB100503B09 /* FYFBoardViewController.m */; };
 		2041C03A18803FD500503B09 /* FYFBoardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2041C03918803FD500503B09 /* FYFBoardView.m */; };
 		2041C04418804CBD00503B09 /* FYFSocketManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2041C04318804CBD00503B09 /* FYFSocketManager.m */; };
 		20B301D31880793000AD741D /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20B301D21880793000AD741D /* AudioToolbox.framework */; };
+		20B301D51880803000AD741D /* back.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 20B301D41880803000AD741D /* back.jpg */; };
 		24D32B3218803EF7007C4057 /* FYFGameListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24D32B3118803EF7007C4057 /* FYFGameListViewController.m */; };
 		24D32B3E18805DC4007C4057 /* FYFBeaconView.m in Sources */ = {isa = PBXBuildFile; fileRef = 24D32B3D18805DC4007C4057 /* FYFBeaconView.m */; };
 		24D32B4018806A7D007C4057 /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 24D32B3F18806A7D007C4057 /* background.jpg */; };
@@ -64,8 +64,6 @@
 		2041C01F1880283F00503B09 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2041C0211880283F00503B09 /* hackathonFYFTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = hackathonFYFTests.m; sourceTree = "<group>"; };
 		2041C02D18802BA800503B09 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		2041C03018802BE000503B09 /* FYFViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FYFViewController.h; path = Classes/Controllers/FYFViewController.h; sourceTree = "<group>"; };
-		2041C03118802BE000503B09 /* FYFViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FYFViewController.m; path = Classes/Controllers/FYFViewController.m; sourceTree = "<group>"; };
 		2041C03418803FB100503B09 /* FYFBoardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FYFBoardViewController.h; path = Classes/Controllers/FYFBoardViewController.h; sourceTree = "<group>"; };
 		2041C03518803FB100503B09 /* FYFBoardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FYFBoardViewController.m; path = Classes/Controllers/FYFBoardViewController.m; sourceTree = "<group>"; };
 		2041C03818803FD500503B09 /* FYFBoardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FYFBoardView.h; path = Classes/Views/FYFBoardView.h; sourceTree = "<group>"; };
@@ -74,6 +72,7 @@
 		2041C04218804CBD00503B09 /* FYFSocketManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FYFSocketManager.h; path = Classes/Others/FYFSocketManager.h; sourceTree = "<group>"; };
 		2041C04318804CBD00503B09 /* FYFSocketManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FYFSocketManager.m; path = Classes/Others/FYFSocketManager.m; sourceTree = "<group>"; };
 		20B301D21880793000AD741D /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		20B301D41880803000AD741D /* back.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = back.jpg; sourceTree = "<group>"; };
 		24D32B3018803EF7007C4057 /* FYFGameListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FYFGameListViewController.h; path = Classes/Controllers/FYFGameListViewController.h; sourceTree = "<group>"; };
 		24D32B3118803EF7007C4057 /* FYFGameListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FYFGameListViewController.m; path = Classes/Controllers/FYFGameListViewController.m; sourceTree = "<group>"; };
 		24D32B3C18805DC4007C4057 /* FYFBeaconView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FYFBeaconView.h; path = Classes/Views/FYFBeaconView.h; sourceTree = "<group>"; };
@@ -211,8 +210,6 @@
 		2041C02B1880286900503B09 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				2041C03018802BE000503B09 /* FYFViewController.h */,
-				2041C03118802BE000503B09 /* FYFViewController.m */,
 				24D32B3718804266007C4057 /* GameListViewController */,
 				2041C03318803F9300503B09 /* BoardViewController */,
 			);
@@ -222,6 +219,7 @@
 		2041C02C18802BA800503B09 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				20B301D41880803000AD741D /* back.jpg */,
 				24D32B3F18806A7D007C4057 /* background.jpg */,
 				2041C02D18802BA800503B09 /* Images.xcassets */,
 			);
@@ -396,6 +394,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20B301D51880803000AD741D /* back.jpg in Resources */,
 				24D32B4018806A7D007C4057 /* background.jpg in Resources */,
 				2041C0011880283E00503B09 /* InfoPlist.strings in Resources */,
 				2041C02E18802BA800503B09 /* Images.xcassets in Resources */,
