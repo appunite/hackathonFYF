@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "FYFGameListViewController.h"
 
 @implementation AppDelegate
 
@@ -19,9 +20,10 @@
     [self.window setTintColor:[UIColor whiteColor]];
     
     // create root view controller
-    UIViewController *viewController = [[UIViewController alloc] init];
-    viewController.view.backgroundColor = [UIColor blueColor];
-    [self.window setRootViewController:viewController];
+    FYFGameListViewController *viewController = [[FYFGameListViewController alloc] init];
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:viewController];
+    
+    [self.window setRootViewController:navigationController];
     
     // other configuration
     [self setupURLCache];
