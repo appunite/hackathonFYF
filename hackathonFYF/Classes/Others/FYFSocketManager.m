@@ -41,7 +41,7 @@ NSString * const FYFSocketManagerCapturedMessageNotification = @"FYFSocketManage
     [_webSocket close];
     
     //
-    NSURL *url = [NSURL URLWithString:@"ws://192.168.2.6:8080/ws"];
+    NSURL *url = [NSURL URLWithString:@"ws://172.17.0.183:8080/ws"];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     
     // init web socket
