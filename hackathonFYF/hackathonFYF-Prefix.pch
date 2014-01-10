@@ -14,7 +14,10 @@
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
 
-    // Others
+    // Managers
+    #import "FYFSocketManager.h"
+
+    // Constants
     #import "FYFConstants.h"
 
 #endif

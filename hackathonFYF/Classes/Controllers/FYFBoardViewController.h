@@ -8,9 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-//Socket
-#import "SRWebSocket.h"
-
-@interface FYFBoardViewController : UIViewController <SRWebSocketDelegate>
+@interface FYFBoardViewController : UIViewController
 
 @end

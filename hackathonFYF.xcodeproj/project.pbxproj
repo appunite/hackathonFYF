@@ -23,6 +23,7 @@
 		2041C03618803FB100503B09 /* FYFBoardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2041C03518803FB100503B09 /* FYFBoardViewController.m */; };
 		2041C03A18803FD500503B09 /* FYFBoardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2041C03918803FD500503B09 /* FYFBoardView.m */; };
 		2041C041188042D800503B09 /* FYFLocationObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 2041C040188042D800503B09 /* FYFLocationObject.m */; };
+		2041C04418804CBD00503B09 /* FYFSocketManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2041C04318804CBD00503B09 /* FYFSocketManager.m */; };
 		24D32B3218803EF7007C4057 /* FYFGameListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24D32B3118803EF7007C4057 /* FYFGameListViewController.m */; };
 		24D32B3518804047007C4057 /* FYFStartGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24D32B3418804047007C4057 /* FYFStartGameViewController.m */; };
 		24D32B3A18804C33007C4057 /* FYFStartGameView.m in Sources */ = {isa = PBXBuildFile; fileRef = 24D32B3918804C33007C4057 /* FYFStartGameView.m */; };
@@ -68,6 +69,8 @@
 		2041C03C188041D600503B09 /* FYFConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FYFConstants.h; sourceTree = "<group>"; };
 		2041C03F188042D800503B09 /* FYFLocationObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FYFLocationObject.h; path = Classes/Models/FYFLocationObject.h; sourceTree = "<group>"; };
 		2041C040188042D800503B09 /* FYFLocationObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FYFLocationObject.m; path = Classes/Models/FYFLocationObject.m; sourceTree = "<group>"; };
+		2041C04218804CBD00503B09 /* FYFSocketManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FYFSocketManager.h; path = Classes/Others/FYFSocketManager.h; sourceTree = "<group>"; };
+		2041C04318804CBD00503B09 /* FYFSocketManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FYFSocketManager.m; path = Classes/Others/FYFSocketManager.m; sourceTree = "<group>"; };
 		24D32B3018803EF7007C4057 /* FYFGameListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FYFGameListViewController.h; path = Classes/Controllers/FYFGameListViewController.h; sourceTree = "<group>"; };
 		24D32B3118803EF7007C4057 /* FYFGameListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FYFGameListViewController.m; path = Classes/Controllers/FYFGameListViewController.m; sourceTree = "<group>"; };
 		24D32B3318804047007C4057 /* FYFStartGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FYFStartGameViewController.h; path = Classes/Controllers/FYFStartGameViewController.h; sourceTree = "<group>"; };
@@ -245,6 +248,8 @@
 			isa = PBXGroup;
 			children = (
 				2041C03C188041D600503B09 /* FYFConstants.h */,
+				2041C04218804CBD00503B09 /* FYFSocketManager.h */,
+				2041C04318804CBD00503B09 /* FYFSocketManager.m */,
 			);
 			name = Others;
 			sourceTree = "<group>";
@@ -441,6 +446,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				24D32B3218803EF7007C4057 /* FYFGameListViewController.m in Sources */,
+				2041C04418804CBD00503B09 /* FYFSocketManager.m in Sources */,
 				2041C03218802BE000503B09 /* FYFViewController.m in Sources */,
 				2041C041188042D800503B09 /* FYFLocationObject.m in Sources */,
 				2041C03A18803FD500503B09 /* FYFBoardView.m in Sources */,
