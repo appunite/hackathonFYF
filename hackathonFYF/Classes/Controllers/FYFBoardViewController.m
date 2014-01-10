@@ -27,6 +27,7 @@
 @implementation FYFBoardViewController {
     FYFBoardView *_boardView;
     CountdownView * _countdownView;
+    CountdownView * _goView;
     LoserView * _loserView;
     SuccessView * _successView;
 }
@@ -43,6 +44,10 @@
     _countdownView = [[CountdownView alloc] initWithFrame:rect];
     [_countdownView setAnimationDelegate:self];
     [view addSubview:_countdownView];
+    
+    _goView = [[CountdownView alloc] initWithFrame:rect];
+    [_goView setAnimationDelegate:self];
+    [view addSubview:_goView];
     
     _loserView = [[LoserView alloc] initWithFrame:rect];
     [_loserView setAnimationDelegate:self];
@@ -77,8 +82,9 @@
                                                       object:nil
                                                        queue:[NSOperationQueue mainQueue]
                                                   usingBlock:^(NSNotification *note) {
-                                                      [_boardView removeBeacons];
-                                                      [_countdownView startAnimation];
+
+                                                      NSString * time = [NSString stringWithFormat:@"%@",[[note userInfo] objectForKey:@"time"]];
+                                                      [_countdownView startAnimationWithTime:time];
                                                   }];
     
     [[NSNotificationCenter defaultCenter] addObserverForName:FYFSocketManagerOccupatedMessageNotification
@@ -92,8 +98,9 @@
                                                       object:nil
                                                        queue:[NSOperationQueue mainQueue]
                                                   usingBlock:^(NSNotification *note) {
-                                                      [_boardView removeBeacons];
+                                                      [_goView startAnimationWithTime:@"GO!"];
                                                       [_boardView addBeacons:5];
+                                                      
                                                   }];
     
     [[NSNotificationCenter defaultCenter] addObserverForName:FYFSocketManagerCapturedMessageNotification
@@ -131,7 +138,7 @@
 #pragma mark CountdownView
 
 - (void)countdownViewdidFinishCounting:(CountdownView *)countdownView {
-    _canRange = ([countdownView isEqual:_countdownView]);
+    _canRange = ([countdownView isEqual:_goView]);
 }
     
    

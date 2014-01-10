@@ -20,7 +20,7 @@
 
 @property (nonatomic, weak) id<CountdownViewDelegate> animationDelegate;
 
-- (void)startAnimation;
+- (void)startAnimationWithTime:(NSString*)time;
 - (void)animationWithText:(NSString*)text completion:(void (^)(BOOL))completion;
 
 @end

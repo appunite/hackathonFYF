@@ -62,7 +62,7 @@ NSString * const FYFSocketManagerWaitingMessageNotification = @"FYFSocketManager
 }
 
 - (void)announcePresenceOfBeaconWithMinor:(NSNumber *)minor {
-    [_webSocket send:@{@"type": @"found", @"beacon_id": minor}];
+    [_webSocket send:@{@"type": @"found", @"beacon_id": [minor stringValue]}];
 }
 
 #pragma mark -
@@ -82,7 +82,7 @@ NSString * const FYFSocketManagerWaitingMessageNotification = @"FYFSocketManager
     if ([messageType isEqualToString:@"countdown"]) {
         [[NSNotificationCenter defaultCenter] postNotificationName:FYFSocketManagerCountdownMessageNotification
                                                             object:self
-                                                          userInfo:message];
+                                                          userInfo:json];
     }
 
     else if ([messageType isEqualToString:@"started"]) {

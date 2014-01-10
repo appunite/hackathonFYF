@@ -33,18 +33,12 @@
     [_counterLabel setFrame:self.bounds];
 }
 
-- (void)startAnimation {
+- (void)startAnimationWithTime:(NSString*)time {
     
-    [self animationWithText:@"3" completion:^(BOOL finished) {
-        [self animationWithText:@"2" completion:^(BOOL finished) {
-            [self animationWithText:@"1" completion:^(BOOL finished) {
-                [self animationWithText:@"GO!" completion:^(BOOL finished) {
-                    if ([self.animationDelegate respondsToSelector:@selector(countdownViewdidFinishCounting:)]) {
-                        [self.animationDelegate countdownViewdidFinishCounting:self];
-                    }
-                }];
-            }];
-        }];
+    [self animationWithText:time completion:^(BOOL finished) {
+        if ([self.animationDelegate respondsToSelector:@selector(countdownViewdidFinishCounting:)]) {
+            [self.animationDelegate countdownViewdidFinishCounting:self];
+        }
     }];
 }
 

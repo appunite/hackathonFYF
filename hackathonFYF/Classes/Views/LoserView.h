@@ -10,4 +10,6 @@
 
 @interface LoserView : CountdownView
 
+- (void)startAnimation;
+
 @end
