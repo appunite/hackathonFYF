@@ -7,6 +7,9 @@
 //  Copyright (c) 2014 AppUnite.com. All rights reserved.
 //
 
+// Frameworks
+#import "AudioToolbox/AudioServices.h"
+
 //Controllers
 #import "FYFBoardViewController.h"
 #import "FYFSocketManager.h"
@@ -79,6 +82,7 @@
                                                   usingBlock:^(NSNotification *note) {
                                                       [_loserView startAnimation];
                                                   }];
+
     [[NSNotificationCenter defaultCenter] addObserverForName:FYFSocketManagerStartedMessageNotification
                                                       object:nil
                                                        queue:[NSOperationQueue mainQueue]
@@ -111,7 +115,8 @@
                                                       [_boardView removeBeacons];
                                                   }];
     
-    
+	// testing
+    AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
 }
 
 #pragma mark -
