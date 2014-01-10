@@ -20,9 +20,9 @@
 		2041C0221880283F00503B09 /* hackathonFYFTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2041C0211880283F00503B09 /* hackathonFYFTests.m */; };
 		2041C02E18802BA800503B09 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2041C02D18802BA800503B09 /* Images.xcassets */; };
 		2041C03218802BE000503B09 /* FYFViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2041C03118802BE000503B09 /* FYFViewController.m */; };
-		AE68C5961880302900962506 /* libEstimoteSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AE68C5951880302900962506 /* libEstimoteSDK.a */; };
 		AE68C5981880308E00962506 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE68C5971880308E00962506 /* SystemConfiguration.framework */; };
 		AE68C59A1880309800962506 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE68C5991880309800962506 /* CoreLocation.framework */; };
+		AE68C5A318803DA600962506 /* libEstimoteSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AE68C5A218803DA600962506 /* libEstimoteSDK.a */; };
 		BC5092D5F4564B6B825FA49A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C4213E8AC7D14B269A16DC83 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -56,14 +56,14 @@
 		2041C03018802BE000503B09 /* FYFViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FYFViewController.h; path = Classes/Controllers/FYFViewController.h; sourceTree = "<group>"; };
 		2041C03118802BE000503B09 /* FYFViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FYFViewController.m; path = Classes/Controllers/FYFViewController.m; sourceTree = "<group>"; };
 		8DA6F90328D64B6393F3F883 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
-		AE68C5901880302900962506 /* ESTBeacon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTBeacon.h; sourceTree = "<group>"; };
-		AE68C5911880302900962506 /* ESTBeaconDefinitions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTBeaconDefinitions.h; sourceTree = "<group>"; };
-		AE68C5921880302900962506 /* ESTBeaconManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTBeaconManager.h; sourceTree = "<group>"; };
-		AE68C5931880302900962506 /* ESTBeaconRegion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTBeaconRegion.h; sourceTree = "<group>"; };
-		AE68C5941880302900962506 /* ESTBeaconUpdateInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTBeaconUpdateInfo.h; sourceTree = "<group>"; };
-		AE68C5951880302900962506 /* libEstimoteSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libEstimoteSDK.a; sourceTree = "<group>"; };
 		AE68C5971880308E00962506 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		AE68C5991880309800962506 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		AE68C59D18803DA600962506 /* ESTBeacon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTBeacon.h; sourceTree = "<group>"; };
+		AE68C59E18803DA600962506 /* ESTBeaconDefinitions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTBeaconDefinitions.h; sourceTree = "<group>"; };
+		AE68C59F18803DA600962506 /* ESTBeaconManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTBeaconManager.h; sourceTree = "<group>"; };
+		AE68C5A018803DA600962506 /* ESTBeaconRegion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTBeaconRegion.h; sourceTree = "<group>"; };
+		AE68C5A118803DA600962506 /* ESTBeaconUpdateInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTBeaconUpdateInfo.h; sourceTree = "<group>"; };
+		AE68C5A218803DA600962506 /* libEstimoteSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libEstimoteSDK.a; sourceTree = "<group>"; };
 		C4213E8AC7D14B269A16DC83 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -78,7 +78,7 @@
 				2041BFFB1880283E00503B09 /* UIKit.framework in Frameworks */,
 				2041BFF71880283E00503B09 /* Foundation.framework in Frameworks */,
 				BC5092D5F4564B6B825FA49A /* libPods.a in Frameworks */,
-				AE68C5961880302900962506 /* libEstimoteSDK.a in Frameworks */,
+				AE68C5A318803DA600962506 /* libEstimoteSDK.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,9 +119,9 @@
 		2041BFF51880283E00503B09 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AE68C59B18803DA600962506 /* EstimoteSDK */,
 				AE68C5991880309800962506 /* CoreLocation.framework */,
 				AE68C5971880308E00962506 /* SystemConfiguration.framework */,
-				AE68C58E1880302900962506 /* EstimoteSDK */,
 				2041BFF61880283E00503B09 /* Foundation.framework */,
 				2041BFF81880283E00503B09 /* CoreGraphics.framework */,
 				2041BFFA1880283E00503B09 /* UIKit.framework */,
@@ -198,24 +198,24 @@
 			name = Others;
 			sourceTree = "<group>";
 		};
-		AE68C58E1880302900962506 /* EstimoteSDK */ = {
+		AE68C59B18803DA600962506 /* EstimoteSDK */ = {
 			isa = PBXGroup;
 			children = (
-				AE68C58F1880302900962506 /* Headers */,
-				AE68C5951880302900962506 /* libEstimoteSDK.a */,
+				AE68C59C18803DA600962506 /* Headers */,
+				AE68C5A218803DA600962506 /* libEstimoteSDK.a */,
 			);
 			name = EstimoteSDK;
 			path = Frameworks/Estimote/EstimoteSDK;
 			sourceTree = "<group>";
 		};
-		AE68C58F1880302900962506 /* Headers */ = {
+		AE68C59C18803DA600962506 /* Headers */ = {
 			isa = PBXGroup;
 			children = (
-				AE68C5901880302900962506 /* ESTBeacon.h */,
-				AE68C5911880302900962506 /* ESTBeaconDefinitions.h */,
-				AE68C5921880302900962506 /* ESTBeaconManager.h */,
-				AE68C5931880302900962506 /* ESTBeaconRegion.h */,
-				AE68C5941880302900962506 /* ESTBeaconUpdateInfo.h */,
+				AE68C59D18803DA600962506 /* ESTBeacon.h */,
+				AE68C59E18803DA600962506 /* ESTBeaconDefinitions.h */,
+				AE68C59F18803DA600962506 /* ESTBeaconManager.h */,
+				AE68C5A018803DA600962506 /* ESTBeaconRegion.h */,
+				AE68C5A118803DA600962506 /* ESTBeaconUpdateInfo.h */,
 			);
 			path = Headers;
 			sourceTree = "<group>";
@@ -479,7 +479,7 @@
 				INFOPLIST_FILE = "hackathonFYF/hackathonFYF-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/piotr/xcode/FYF/hackathonFYF/Frameworks/Estimote/EstimoteSDK,
+					"${SRCROOT}/Frameworks/Estimote/EstimoteSDK",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -497,7 +497,7 @@
 				INFOPLIST_FILE = "hackathonFYF/hackathonFYF-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/piotr/xcode/FYF/hackathonFYF/Frameworks/Estimote/EstimoteSDK,
+					"${SRCROOT}/Frameworks/Estimote/EstimoteSDK",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
