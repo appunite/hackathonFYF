@@ -66,6 +66,11 @@
     }
     
 
+    // add pop gesture recognizer
+    [self.navigationController.interactivePopGestureRecognizer setDelegate:(id<UIGestureRecognizerDelegate>)self];
+    [self.navigationController.interactivePopGestureRecognizer setEnabled:YES];
+
+    // hide navigation bar
     [self.navigationController setNavigationBarHidden:YES];
     
     [[NSNotificationCenter defaultCenter] addObserverForName:FYFSocketManagerCountdownMessageNotification
