@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface FYFBoardView : UIView
-- (void)addBeacons;
+@property (strong, nonatomic) NSMutableArray *beacons;
+- (void)addBeacons:(NSInteger)beaconsNumber;
 @end

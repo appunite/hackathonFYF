@@ -74,7 +74,6 @@
 #pragma mark CountdownView
 
 - (void)countdownViewdidFinishCounting:(CountdownView *)countdownView {
-    
     if ([countdownView isEqual:_countdownView]) {
         NSLog(@"move bitch!");
     } else {

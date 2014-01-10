@@ -10,7 +10,6 @@
 #import "FYFBeaconView.h"
 
 @implementation FYFBoardView {
-    FYFBeaconView *_beacon;
     UIImageView *_backgroundView;
 }
 
@@ -25,24 +24,43 @@
         _backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"background.jpg"]];
         [self addSubview:_backgroundView];
         
-        _beacon = [[FYFBeaconView alloc] init];
-        [self performSelector:@selector(addBeacon) withObject:nil afterDelay:3.0f];
-        
-        
         
     }
     return self;
 }
-
-- (void)addBeacon {
-    [self addSubview:_beacon];
-    [_beacon startAnimating];
+- (void)addBeacons:(NSInteger)beaconsNumber {
+    _beacons = [[NSMutableArray alloc] init];
+    
+    for (int i=0; i < beaconsNumber; i++) {
+        FYFBeaconView *beacon = [[FYFBeaconView alloc] init];
+        [self addSubview:beacon];
+        [_beacons addObject:beacon];
+    }
+    
+    [self setNeedsDisplay];
 }
+
+
 
 - (void)layoutSubviews {
     [super layoutSubviews];
     [_backgroundView setFrame:self.bounds];
-    [_beacon setFrame:CGRectMake(80.0, 80.0f, 30.0f, 30.0f)];
+    
+    CGSize beaconSize = CGSizeMake(30.0f, 30.0f);
+    CGFloat x = 30.0f;
+    CGFloat y = 50.0f;
+    NSInteger i = 1;
+    
+    for (FYFBeaconView *b in _beacons) {
+        y = 50.0f * i;
+        CGRect rect = CGRectMake(x, y, beaconSize.width, beaconSize.height);
+        [b setFrame:rect];
+        if (i == 3) {
+            x = CGRectGetMaxX(self.bounds) - 60.0f;
+            i = 1;
+        }
+    }
+    
 }
 
 - (void)addBeacons {
