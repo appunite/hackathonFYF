@@ -16,6 +16,7 @@
 
 //Views
 #import "FYFBoardView.h"
+#import "FYFBeaconView.h"
 #import "WaitingForPlayersView.h"
 
 @interface FYFBoardViewController () {
@@ -98,6 +99,16 @@
                                                   usingBlock:^(NSNotification *note) {
                                                       [_loserView startAnimation];
 
+                                                      // vibrate
+                                                      AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
+                                                  }];
+    
+    [[NSNotificationCenter defaultCenter] addObserverForName:FYFSocketManagerFinishedMessageNotification
+                                                      object:nil
+                                                       queue:[NSOperationQueue mainQueue]
+                                                  usingBlock:^(NSNotification *note) {
+                                                      [_loserView startAnimation];
+                                                      
                                                       // vibrate
                                                       AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
                                                   }];
@@ -186,6 +197,7 @@
         if (beacon.rssi >= -52) {
             _canRange = NO;
             [[FYFSocketManager sharedManager] announcePresenceOfBeaconWithMinor:beacon.minor];
+            [(FYFBeaconView*)[_boardView.beacons objectAtIndex:[beacon.minor integerValue] - 1] setAvailable:NO];
         }
     }
 }

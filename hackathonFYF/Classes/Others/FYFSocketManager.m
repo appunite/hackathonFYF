@@ -108,7 +108,7 @@ NSString * const FYFSocketManagerWaitingMessageNotification = @"FYFSocketManager
         [[NSNotificationCenter defaultCenter] postNotificationName:FYFSocketManagerFinishedMessageNotification
                                                             object:self
                                                           userInfo:message];
-    }
+    } 
 
     else if ([messageType isEqualToString:@"waiting_for_clients"]) {
         [[NSNotificationCenter defaultCenter] postNotificationName:FYFSocketManagerWaitingMessageNotification
