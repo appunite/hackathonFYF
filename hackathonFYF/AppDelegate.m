@@ -22,7 +22,6 @@
     // create root view controller
     FYFGameListViewController *viewController = [[FYFGameListViewController alloc] init];
     UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:viewController];
-    
     [self.window setRootViewController:navigationController];
     
     // other configuration

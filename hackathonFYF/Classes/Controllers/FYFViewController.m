@@ -8,6 +8,7 @@
 
 #import "FYFViewController.h"
 
+
 @interface FYFViewController () {
     ESTBeaconManager * _beaconManager;
 }
@@ -18,6 +19,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    [self.view setBackgroundColor:[UIColor whiteColor]];
     
     _beaconManager = [[ESTBeaconManager alloc] init];
     _beaconManager.delegate = self;
@@ -35,6 +38,9 @@
     [self.view addSubview:_beaconLabel];
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+}
 
 -(void)beaconManager:(ESTBeaconManager *)manager
      didRangeBeacons:(NSArray *)beacons
@@ -55,4 +61,6 @@
         }
     }
 }
+
+
 @end

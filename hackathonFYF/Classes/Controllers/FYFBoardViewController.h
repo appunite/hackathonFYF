@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FYFBoardViewController : UIViewController
+//Views
+#import "CountdownView.h"
+
+@interface FYFBoardViewController : UIViewController<CountdownViewDelegate>
 
 @end

@@ -30,6 +30,7 @@
 		AE68C5981880308E00962506 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE68C5971880308E00962506 /* SystemConfiguration.framework */; };
 		AE68C59A1880309800962506 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE68C5991880309800962506 /* CoreLocation.framework */; };
 		AE68C5A318803DA600962506 /* libEstimoteSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AE68C5A218803DA600962506 /* libEstimoteSDK.a */; };
+		AE68C5A718805E0900962506 /* CountdownView.m in Sources */ = {isa = PBXBuildFile; fileRef = AE68C5A618805E0900962506 /* CountdownView.m */; };
 		BC5092D5F4564B6B825FA49A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C4213E8AC7D14B269A16DC83 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -85,6 +86,8 @@
 		AE68C5A018803DA600962506 /* ESTBeaconRegion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTBeaconRegion.h; sourceTree = "<group>"; };
 		AE68C5A118803DA600962506 /* ESTBeaconUpdateInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTBeaconUpdateInfo.h; sourceTree = "<group>"; };
 		AE68C5A218803DA600962506 /* libEstimoteSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libEstimoteSDK.a; sourceTree = "<group>"; };
+		AE68C5A518805E0900962506 /* CountdownView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CountdownView.h; path = Classes/Views/CountdownView.h; sourceTree = "<group>"; };
+		AE68C5A618805E0900962506 /* CountdownView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CountdownView.m; path = Classes/Views/CountdownView.m; sourceTree = "<group>"; };
 		C4213E8AC7D14B269A16DC83 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -159,6 +162,7 @@
 				2041C0061880283E00503B09 /* AppDelegate.m */,
 				2041C02B1880286900503B09 /* Controllers */,
 				2041C03B188041B000503B09 /* Others */,
+				AE68C5A418805DE600962506 /* Views */,
 				2041BFFD1880283E00503B09 /* Supporting Files */,
 			);
 			name = Classes;
@@ -293,6 +297,15 @@
 				AE68C5A118803DA600962506 /* ESTBeaconUpdateInfo.h */,
 			);
 			path = Headers;
+			sourceTree = "<group>";
+		};
+		AE68C5A418805DE600962506 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AE68C5A518805E0900962506 /* CountdownView.h */,
+				AE68C5A618805E0900962506 /* CountdownView.m */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -435,6 +448,7 @@
 				2041C041188042D800503B09 /* FYFLocationObject.m in Sources */,
 				2041C03A18803FD500503B09 /* FYFBoardView.m in Sources */,
 				2041C0071880283E00503B09 /* AppDelegate.m in Sources */,
+				AE68C5A718805E0900962506 /* CountdownView.m in Sources */,
 				2041C0031880283E00503B09 /* main.m in Sources */,
 				2041C03618803FB100503B09 /* FYFBoardViewController.m in Sources */,
 			);
